@@ -10,8 +10,8 @@
 
         <div class="card-body">
                 <ul class="nav nav-tabs nav-tabs-highlight">
-                    <li class="nav-item"><a href="#all-uc" class="nav-link active" data-toggle="tab">Incomplete Payments</a></li>
-                    <li class="nav-item"><a href="#all-cl" class="nav-link" data-toggle="tab">Completed Payments</a></li>
+                    <li class="nav-item"><a href="#all-uc" class="nav-link active" data-toggle="tab">Incomplete Pembayaran</a></li>
+                    <li class="nav-item"><a href="#all-cl" class="nav-link" data-toggle="tab">Completed Pembayaran</a></li>
                 </ul>
 
         <div class="tab-content">
