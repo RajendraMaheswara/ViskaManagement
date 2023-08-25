@@ -17,7 +17,7 @@ class Mk extends Qs
 
     public static function getRemarks()
     {
-        return ['Average', 'Credit', 'Distinction', 'Excellent', 'Fail', 'Fair', 'Good', 'Pass', 'Poor', 'Very Good', 'Very Poor'];
+        return ['Sangat Bagus', 'Bagus', 'Cukup', 'Buruk', 'Sangat Buruk', 'Gagal'];
     }
 
     /** ADD ORDINAL SUFFIX TO POSITION **/

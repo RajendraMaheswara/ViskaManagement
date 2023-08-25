@@ -1,16 +1,17 @@
 @extends('layouts.master')
-@section('page_title', 'Manage Subjects')
+@section('page_title', 'Manage Mata Pelajaran')
 @section('content')
 
     <div class="card">
         <div class="card-header header-elements-inline">
-            <h6 class="card-title">Manage Subjects</h6>
+            <h6 class="card-title">Manage Mata Pelajaran</h6>
             {!! Qs::getPanelOptions() !!}
         </div>
 
         <div class="card-body">
             <ul class="nav nav-tabs nav-tabs-highlight">
-                <li class="nav-item"><a href="#new-subject" class="nav-link active" data-toggle="tab">Add Subject</a></li>
+                <li class="nav-item"><a href="#new-subject" class="nav-link active" data-toggle="tab">Tambah Mata Pelajaran</a>
+                </li>
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Manage Subjects</a>
                     <div class="dropdown-menu dropdown-menu-right">
@@ -32,7 +33,7 @@
                                             class="text-danger">*</span></label>
                                     <div class="col-lg-9">
                                         <input id="name" name="name" value="{{ old('name') }}" required
-                                            type="text" class="form-control" placeholder="Name of subject">
+                                            type="text" class="form-control" placeholder="Mapel pelajaran">
                                     </div>
                                 </div>
 
@@ -41,7 +42,7 @@
                                         <span class="text-danger">*</span></label>
                                     <div class="col-lg-9">
                                         <input id="slug" required name="slug" value="{{ old('slug') }}"
-                                            type="text" class="form-control" placeholder="Eg. B.Eng">
+                                            type="text" class="form-control" placeholder="Matematika = MTK ">
                                     </div>
                                 </div>
 
@@ -49,7 +50,7 @@
                                     <label for="my_class_id" class="col-lg-3 col-form-label font-weight-semibold">Pilih
                                         Kelas <span class="text-danger">*</span></label>
                                     <div class="col-lg-9">
-                                        <select required data-placeholder="Select Class" class="form-control select"
+                                        <select required data-placeholder="Pilih Kelas" class="form-control select"
                                             name="my_class_id" id="my_class_id">
                                             <option value=""></option>
                                             @foreach ($my_classes as $c)
@@ -64,8 +65,8 @@
                                     <label for="teacher_id" class="col-lg-3 col-form-label font-weight-semibold">Guru <span
                                             class="text-danger">*</span></label>
                                     <div class="col-lg-9">
-                                        <select required data-placeholder="Select Teacher"
-                                            class="form-control select-search" name="teacher_id" id="teacher_id">
+                                        <select required data-placeholder="Pilih Guru" class="form-control select-search"
+                                            name="teacher_id" id="teacher_id">
                                             <option value=""></option>
                                             @foreach ($teachers as $t)
                                                 <option {{ old('teacher_id') == Qs::hash($t->id) ? 'selected' : '' }}

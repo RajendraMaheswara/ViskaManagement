@@ -1,10 +1,10 @@
 @extends('layouts.master')
-@section('page_title', 'Edit Grade')
+@section('page_title', 'Edit Nilai')
 @section('content')
 
     <div class="card">
         <div class="card-header header-elements-inline">
-            <h6 class="card-title">Edit Grade</h6>
+            <h6 class="card-title">Edit Nilai</h6>
             {!! Qs::getPanelOptions() !!}
         </div>
 
@@ -14,14 +14,14 @@
                     <form method="post" action="{{ route('grades.update', $gr->id) }}">
                         @csrf @method('PUT')
                         <div class="form-group row">
-                            <label class="col-lg-3 col-form-label font-weight-semibold">Name <span class="text-danger">*</span></label>
+                            <label class="col-lg-3 col-form-label font-weight-semibold">Nama <span class="text-danger">*</span></label>
                             <div class="col-lg-9">
                                 <input name="name" value="{{ $gr->name }}" required type="text" class="form-control" placeholder="Eg. C4">
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="class_type_id" class="col-lg-3 col-form-label font-weight-semibold">Grade Type</label>
+                            <label for="class_type_id" class="col-lg-3 col-form-label font-weight-semibold">Tipe Nilai</label>
                             <div class="col-lg-9">
                                 <select class="form-control select" name="class_type_id" id="class_type_id">
                                     <option value="">Not Applicable</option>
@@ -33,24 +33,24 @@
                         </div>
 
                         <div class="form-group row">
-                            <label class="col-lg-3 col-form-label font-weight-semibold">Mark From <span class="text-danger">*</span></label>
+                            <label class="col-lg-3 col-form-label font-weight-semibold">Nilai dari <span class="text-danger">*</span></label>
                             <div class="col-lg-3">
                                 <input name="mark_from" min="0" max="100" value="{{ $gr->mark_from }}" required type="number" class="form-control" placeholder="0">
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label class="col-lg-3 col-form-label font-weight-semibold">Mark To <span class="text-danger">*</span></label>
+                            <label class="col-lg-3 col-form-label font-weight-semibold">Nilai ke <span class="text-danger">*</span></label>
                             <div class="col-lg-3">
                                 <input name="mark_to" min="0" max="100" value="{{ $gr->mark_to }}" required type="number" class="form-control" placeholder="0">
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="remark" class="col-lg-3 col-form-label font-weight-semibold">Remark</label>
+                            <label for="remark" class="col-lg-3 col-form-label font-weight-semibold">Keterangan</label>
                             <div class="col-lg-9">
                                 <select  class="form-control select" name="remark" id="remark">
-                                    <option value="">Select Remark...</option>
+                                    <option value="">Pilih Keterangan</option>
                                     @foreach(Mk::getRemarks() as $rem)
                                         <option {{ $gr->remark == $rem ? 'selected' : '' }} value="{{ $rem }}">{{ $rem }}</option>
                                     @endforeach

@@ -36,7 +36,7 @@ class MyClassController extends Controller
         $mc = $this->my_class->create($data);
 
         // Create Default Section
-        $s =['my_class_id' => $mc->id,
+        $s =    ['my_class_id' => $mc->id,
             'name' => 'A',
             'active' => 1,
             'teacher_id' => NULL,
