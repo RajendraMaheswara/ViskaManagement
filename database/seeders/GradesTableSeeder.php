@@ -23,14 +23,11 @@ class GradesTableSeeder extends Seeder
     {
 
         $d = [
-
-            ['name' => 'A', 'mark_from' => 85, 'mark_to' => 100, 'remark' => 'Sangat Bagus'],
-            ['name' => 'B', 'mark_from' => 70, 'mark_to' => 84, 'remark' => 'Bagus'],
-            ['name' => 'C', 'mark_from' => 60, 'mark_to' => 69, 'remark' => 'Cukup'],
-            ['name' => 'E', 'mark_from' => 40, 'mark_to' => 59, 'remark' => 'Buruk'],
-            ['name' => 'F', 'mark_from' => 0, 'mark_to' => 39, 'remark' => 'Gagal'],
-
-
+            ['name' => 'A', 'mark_from' => 90, 'mark_to' => 100, 'remark' => 'Sangat Bagus'],
+            ['name' => 'B', 'mark_from' => 80, 'mark_to' => 89, 'remark' => 'Sangat Baik'],
+            ['name' => 'C', 'mark_from' => 70, 'mark_to' => 79, 'remark' => 'Baik'],
+            ['name' => 'D', 'mark_from' => 60, 'mark_to' => 69, 'remark' => 'Lulus'],
+            ['name' => 'E', 'mark_from' => 0, 'mark_to' => 59, 'remark' => 'Belajar Lagi'],
         ];
         DB::table('grades')->insert($d);
     }

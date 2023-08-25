@@ -19,16 +19,33 @@ class MyClassesTableSeeder extends Seeder
         $ct = ClassType::pluck('id')->all();
 
         $data = [
-            ['name' => 'Nursery 1', 'class_type_id' => $ct[2]],
-            ['name' => 'Nursery 2', 'class_type_id' => $ct[2]],
-            ['name' => 'Nursery 3', 'class_type_id' => $ct[2]],
-            ['name' => 'Primary 1', 'class_type_id' => $ct[3]],
-            ['name' => 'Primary 2', 'class_type_id' => $ct[3]],
-            ['name' => 'JSS 2', 'class_type_id' => $ct[4]],
-            ['name' => 'JSS 3', 'class_type_id' => $ct[4]],
-            ['name' => 'SSS 1', 'class_type_id' => $ct[5]],
-            ['name' => 'SSS 2', 'class_type_id' => $ct[5]],
-            ['name' => 'SSS 3', 'class_type_id' => $ct[5]],
+            ['name' => 'Rekayasa Perangkat Lunak', 'class_type_id' => $ct[1]],
+            ['name' => 'Rekayasa Perangkat Lunak', 'class_type_id' => $ct[2]],
+            ['name' => 'Rekayasa Perangkat Lunak', 'class_type_id' => $ct[3]],
+
+            ['name' => 'Akuntansi dan Keuangan Lembaga', 'class_type_id' => $ct[1]],
+            ['name' => 'Akuntansi dan Keuangan Lembaga', 'class_type_id' => $ct[2]],
+            ['name' => 'Akuntansi dan Keuangan Lembaga', 'class_type_id' => $ct[3]],
+
+            ['name' => 'Tata Kelola Perkantoran', 'class_type_id' => $ct[1]],
+            ['name' => 'Tata Kelola Perkantoran', 'class_type_id' => $ct[2]],
+            ['name' => 'Tata Kelola Perkantoran', 'class_type_id' => $ct[3]],
+
+            ['name' => 'Pemasaran', 'class_type_id' => $ct[1]],
+            ['name' => 'Pemasaran', 'class_type_id' => $ct[2]],
+            ['name' => 'Pemasaran', 'class_type_id' => $ct[3]],
+
+            ['name' => 'Usaha Perjalanan Pariwisata', 'class_type_id' => $ct[1]],
+            ['name' => 'Usaha Perjalanan Pariwisata', 'class_type_id' => $ct[2]],
+            ['name' => 'Usaha Perjalanan Pariwisata', 'class_type_id' => $ct[3]],
+
+            ['name' => 'Multimedia', 'class_type_id' => $ct[1]],
+            ['name' => 'Multimedia', 'class_type_id' => $ct[2]],
+            ['name' => 'Multimedia', 'class_type_id' => $ct[3]],
+
+            ['name' => 'Produksi Film dan Program Televisi', 'class_type_id' => $ct[1]],
+            ['name' => 'Produksi Film dan Program Televisi', 'class_type_id' => $ct[2]],
+            ['name' => 'Produksi Film dan Program Televisi', 'class_type_id' => $ct[3]],
             ];
 
         DB::table('my_classes')->insert($data);
