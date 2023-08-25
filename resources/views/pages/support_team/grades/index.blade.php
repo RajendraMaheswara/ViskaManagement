@@ -1,18 +1,18 @@
 @extends('layouts.master')
-@section('page_title', 'Manage Grades')
+@section('page_title', 'Manage Nilai')
 @section('content')
 
     <div class="card">
         <div class="card-header header-elements-inline">
-            <h6 class="card-title">Manage Grades</h6>
+            <h6 class="card-title">Manage Nilai</h6>
             {!! Qs::getPanelOptions() !!}
         </div>
 
         <div class="card-body">
             <ul class="nav nav-tabs nav-tabs-highlight">
-                <li class="nav-item"><a href="#all-grades" class="nav-link active" data-toggle="tab">Manage Grades</a></li>
-                <li class="nav-item"><a href="#new-grade" class="nav-link" data-toggle="tab"><i class="icon-plus2"></i> Add
-                        Grade</a></li>
+                <li class="nav-item"><a href="#all-grades" class="nav-link active" data-toggle="tab">Manage Nilai</a></li>
+                <li class="nav-item"><a href="#new-grade" class="nav-link" data-toggle="tab"><i class="icon-plus2"></i> Tambah
+                        Nilai</a></li>
             </ul>
 
             <div class="tab-content">
@@ -22,8 +22,8 @@
                             <tr>
                                 <th>No</th>
                                 <th>Nama</th>
-                                <th>Grade Type</th>
-                                <th>Panjang</th>
+                                <th>Tipe Nilai</th>
+                                <th>Nilai</th>
                                 <th>Keterangan</th>
                                 <th>Action</th>
                             </tr>
@@ -87,7 +87,7 @@
                             <form method="post" action="{{ route('grades.store') }}">
                                 @csrf
                                 <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label font-weight-semibold">Name <span
+                                    <label class="col-lg-3 col-form-label font-weight-semibold">Nama <span
                                             class="text-danger">*</span></label>
                                     <div class="col-lg-9">
                                         <input name="name" value="{{ old('name') }}" required type="text"
@@ -96,8 +96,8 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="class_type_id" class="col-lg-3 col-form-label font-weight-semibold">Grade
-                                        Type</label>
+                                    <label for="class_type_id" class="col-lg-3 col-form-label font-weight-semibold">Tipe Nilai
+                                        </label>
                                     <div class="col-lg-9">
                                         <select class="form-control select" name="class_type_id" id="class_type_id">
                                             <option value="">Not Applicable</option>
@@ -110,7 +110,7 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label font-weight-semibold">Mark From <span
+                                    <label class="col-lg-3 col-form-label font-weight-semibold">Nilai dari <span
                                             class="text-danger">*</span></label>
                                     <div class="col-lg-3">
                                         <input min="0" max="100" name="mark_from"
@@ -120,7 +120,7 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label font-weight-semibold">Mark To <span
+                                    <label class="col-lg-3 col-form-label font-weight-semibold">Nilai ke <span
                                             class="text-danger">*</span></label>
                                     <div class="col-lg-3">
                                         <input min="0" max="100" name="mark_to" value="{{ old('mark_to') }}"
@@ -130,10 +130,10 @@
 
                                 <div class="form-group row">
                                     <label for="remark"
-                                        class="col-lg-3 col-form-label font-weight-semibold">Remark</label>
+                                        class="col-lg-3 col-form-label font-weight-semibold">Katerangan</label>
                                     <div class="col-lg-9">
                                         <select class="form-control select" name="remark" id="remark">
-                                            <option value="">Select Remark...</option>
+                                            <option value="">Pilih Keterangan</option>
                                             @foreach (Mk::getRemarks() as $rem)
                                                 <option {{ old('remark') == $rem ? 'selected' : '' }}
                                                     value="{{ $rem }}">{{ $rem }}</option>
