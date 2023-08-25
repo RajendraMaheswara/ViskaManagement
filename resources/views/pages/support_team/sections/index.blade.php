@@ -1,19 +1,19 @@
 @extends('layouts.master')
-@section('page_title', 'Manage Class Sections')
+@section('page_title', 'Manage Tingkat Kelas')
 @section('content')
 
     <div class="card">
         <div class="card-header header-elements-inline">
-            <h6 class="card-title">Manage Class Sections</h6>
+            <h6 class="card-title">Manage Tingkat Kelas</h6>
             {!! Qs::getPanelOptions() !!}
         </div>
 
         <div class="card-body">
             <ul class="nav nav-tabs nav-tabs-highlight">
-                <li class="nav-item"><a href="#new-section" class="nav-link active" data-toggle="tab">Create New Section</a>
+                <li class="nav-item"><a href="#new-section" class="nav-link active" data-toggle="tab">Tambah Tingkat Kelas</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Manage Sections</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Manage Tingkat Kelas</a>
                     <div class="dropdown-menu dropdown-menu-right">
                         @foreach ($my_classes as $c)
                             <a href="#c{{ $c->id }}" class="dropdown-item" data-toggle="tab">{{ $c->name }}</a>
@@ -29,19 +29,18 @@
                             <form class="ajax-store" method="post" action="{{ route('sections.store') }}">
                                 @csrf
                                 <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label font-weight-semibold">Name <span
+                                    <label class="col-lg-3 col-form-label font-weight-semibold">Nama <span
                                             class="text-danger">*</span></label>
                                     <div class="col-lg-9">
                                         <input name="name" value="{{ old('name') }}" required type="text"
-                                            class="form-control" placeholder="Name of Section">
+                                            class="form-control" placeholder="Nama Tingkat">
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="my_class_id" class="col-lg-3 col-form-label font-weight-semibold">Select
-                                        Class <span class="text-danger">*</span></label>
+                                    <label for="my_class_id" class="col-lg-3 col-form-label font-weight-semibold">Pilih Kelas <span class="text-danger">*</span></label>
                                     <div class="col-lg-9">
-                                        <select required data-placeholder="Select Class" class="form-control select"
+                                        <select required data-placeholder="Pilih Kelas" class="form-control select"
                                             name="my_class_id" id="my_class_id">
                                             @foreach ($my_classes as $c)
                                                 <option {{ old('my_class_id') == $c->id ? 'selected' : '' }}
@@ -53,9 +52,9 @@
 
                                 <div class="form-group row">
                                     <label for="teacher_id"
-                                        class="col-lg-3 col-form-label font-weight-semibold">Teacher</label>
+                                        class="col-lg-3 col-form-label font-weight-semibold">Guru</label>
                                     <div class="col-lg-9">
-                                        <select data-placeholder="Select Teacher" class="form-control select-search"
+                                        <select data-placeholder="Pilih Guru" class="form-control select-search"
                                             name="teacher_id" id="teacher_id">
                                             <option value=""></option>
                                             @foreach ($teachers as $t)
@@ -81,9 +80,9 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Name</th>
-                                    <th>Class</th>
-                                    <th>Teacher</th>
+                                    <th>Nama</th>
+                                    <th>Kelas</th>
+                                    <th>Guru</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>

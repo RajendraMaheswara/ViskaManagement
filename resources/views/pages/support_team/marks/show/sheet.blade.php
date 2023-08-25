@@ -1,11 +1,11 @@
 <table class="table table-bordered table-responsive text-center">
     <thead>
     <tr>
-        <th rowspan="2">S/N</th>
-        <th rowspan="2">SUBJECTS</th>
-        <th rowspan="2">CA1<br>(20)</th>
-        <th rowspan="2">CA2<br>(20)</th>
-        <th rowspan="2">EXAMS<br>(60)</th>
+        <th rowspan="2">NO</th>
+        <th rowspan="2">MATA PELAJARAN</th>
+        <th rowspan="2">TUGAS 1<br>(20)</th>
+        <th rowspan="2">TUGAS 1<br>(20)</th>
+        <th rowspan="2">UJIAN<br>(60)</th>
         <th rowspan="2">TOTAL<br>(100)</th>
 
         {{--@if($ex->term == 3) --}}{{-- 3rd Term --}}{{--
@@ -16,9 +16,9 @@
         <th rowspan="2">CUM AVE</th>
         @endif--}}
 
-        <th rowspan="2">GRADE</th>
-        <th rowspan="2">SUBJECT <br> POSITION</th>
-        <th rowspan="2">REMARKS</th>
+        <th rowspan="2">NILAI</th>
+        <th rowspan="2">PERINGKAT</th>
+        <th rowspan="2">HASIL AKHIR</th>
     </tr>
     </thead>
 

@@ -53,7 +53,7 @@ class StudentRecordsTableSeeder extends Seeder
             'name' => 'Student',
             'user_type' => 'student',
             'username' => 'student',
-            'password' => Hash::make('cj'),
+            'password' => Hash::make('123456'),
             'email' => 'student@gmail.com',
         ]);
 

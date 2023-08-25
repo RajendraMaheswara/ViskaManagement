@@ -21,12 +21,12 @@
 <table style="width:100%; border-collapse:collapse; border: 1px solid #000; margin: 10px auto;" border="1">
     <thead>
     <tr>
-        <th rowspan="2">SUBJECTS</th>
-        <th colspan="3">CONTINUOUS ASSESSMENT</th>
-        <th rowspan="2">EXAM<br>(60)</th>
-        <th rowspan="2">FINAL MARKS <br> (100%)</th>
-        <th rowspan="2">GRADE</th>
-        <th rowspan="2">SUBJECT <br> POSITION</th>
+        <th rowspan="2">MATA PELAJARAN</th>
+        <th colspan="3">TUGAS</th>
+        <th rowspan="2">UJAN<br>(60)</th>
+        <th rowspan="2">TOTAL <br> (100%)</th>
+        <th rowspan="2">NILAI</th>
+        <th rowspan="2">PERINGKAT</th>
 
 
       {{--  @if($ex->term == 3) --}}{{-- 3rd Term --}}{{--
@@ -38,11 +38,11 @@
         <th rowspan="2">GRADE</th>
         @endif--}}
 
-        <th rowspan="2">REMARKS</th>
+        <th rowspan="2">HASIL AKHIR</th>
     </tr>
     <tr>
-        <th>CA1(20)</th>
-        <th>CA2(20)</th>
+        <th>TUGAS 1(20)</th>
+        <th>TUGAS 2(20)</th>
         <th>TOTAL(40)</th>
     </tr>
     </thead>

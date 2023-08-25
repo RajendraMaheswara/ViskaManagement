@@ -71,9 +71,8 @@
                             <div class="alert alert-info border-0 alert-dismissible">
                                 <button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
 
-                                <span>When a class is created, a Section will be automatically created for the class, you
-                                    can edit it or add more sections to the class at <a target="_blank"
-                                        href="{{ route('sections.index') }}">Manage Sections</a></span>
+                                <span>Tingkat kelas dalam kelas dapat ditambah dan diedit di <a target="_blank"
+                                        href="{{ route('sections.index') }}">Manage Tingkat Kelas</a></span>
                             </div>
                         </div>
                     </div>
@@ -87,7 +86,7 @@
                                             class="text-danger">*</span></label>
                                     <div class="col-lg-9">
                                         <input name="name" value="{{ old('name') }}" required type="text"
-                                            class="form-control" placeholder="Name of Class">
+                                            class="form-control" placeholder="Nama Kelas">
                                     </div>
                                 </div>
 

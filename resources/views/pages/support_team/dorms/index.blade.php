@@ -76,7 +76,7 @@
                                             class="text-danger">*</span></label>
                                     <div class="col-lg-9">
                                         <input name="name" value="{{ old('name') }}" required type="text"
-                                            class="form-control" placeholder="Name of Dormitory">
+                                            class="form-control" placeholder="Nama Ruangan">
                                     </div>
                                 </div>
 
@@ -84,7 +84,7 @@
                                     <label class="col-lg-3 col-form-label font-weight-semibold">Deskripsi</label>
                                     <div class="col-lg-9">
                                         <input name="description" value="{{ old('description') }}" type="text"
-                                            class="form-control" placeholder="Description of Dormitory">
+                                            class="form-control" placeholder="Deskripsi Ruangan">
                                     </div>
                                 </div>
 
