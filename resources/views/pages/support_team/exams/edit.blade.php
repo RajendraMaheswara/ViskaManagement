@@ -1,10 +1,10 @@
 @extends('layouts.master')
-@section('page_title', 'Edit Exam - ' . $ex->name . ' (' . $ex->year . ')')
+@section('page_title', 'Edit Ujian - ' . $ex->name . ' (' . $ex->year . ')')
 @section('content')
 
     <div class="card">
         <div class="card-header header-elements-inline">
-            <h6 class="card-title">Edit Exam</h6>
+            <h6 class="card-title">Edit Ujian</h6>
             {!! Qs::getPanelOptions() !!}
         </div>
 
@@ -14,7 +14,7 @@
                     <form method="post" action="{{ route('exams.update', $ex->id) }}">
                         @csrf @method('PUT')
                         <div class="form-group row">
-                            <label class="col-lg-3 col-form-label font-weight-semibold">Name <span
+                            <label class="col-lg-3 col-form-label font-weight-semibold">Nama <span
                                     class="text-danger">*</span></label>
                             <div class="col-lg-9">
                                 <input name="name" value="{{ $ex->name }}" required type="text"
@@ -23,7 +23,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="term" class="col-lg-3 col-form-label font-weight-semibold">Term</label>
+                            <label for="term" class="col-lg-3 col-form-label font-weight-semibold">Aturan</label>
                             <div class="col-lg-9">
                                 <select data-placeholder="Select Teacher" class="form-control select-search" name="term"
                                     id="term">

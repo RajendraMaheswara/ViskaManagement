@@ -1,18 +1,18 @@
 @extends('layouts.master')
-@section('page_title', 'Manage Exams')
+@section('page_title', 'Manage Ujian')
 @section('content')
 
     <div class="card">
         <div class="card-header header-elements-inline">
-            <h6 class="card-title">Manage Exams</h6>
+            <h6 class="card-title">Manage Ujian</h6>
             {!! Qs::getPanelOptions() !!}
         </div>
 
         <div class="card-body">
             <ul class="nav nav-tabs nav-tabs-highlight">
-                <li class="nav-item"><a href="#all-exams" class="nav-link active" data-toggle="tab">Manage Exam</a></li>
-                <li class="nav-item"><a href="#new-exam" class="nav-link" data-toggle="tab"><i class="icon-plus2"></i> Add
-                        Exam</a></li>
+                <li class="nav-item"><a href="#all-exams" class="nav-link active" data-toggle="tab">Manage Ulangan</a></li>
+                <li class="nav-item"><a href="#new-exam" class="nav-link" data-toggle="tab"><i class="icon-plus2"></i> Tambah Ujian
+                        </a></li>
             </ul>
 
             <div class="tab-content">
@@ -22,8 +22,8 @@
                             <tr>
                                 <th>No</th>
                                 <th>Nama</th>
-                                <th>Term</th>
-                                <th>Session</th>
+                                <th>Aturan</th>
+                                <th>Waktu</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -73,7 +73,7 @@
                             <div class="alert alert-info border-0 alert-dismissible">
                                 <button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
 
-                                <span>You are creating an Exam for the Current Session
+                                <span>Kamu membuat Ujian untuk waktu
                                     <strong>{{ Qs::getSetting('current_session') }}</strong></span>
                             </div>
                         </div>
@@ -83,7 +83,7 @@
                             <form method="post" action="{{ route('exams.store') }}">
                                 @csrf
                                 <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label font-weight-semibold">Name <span
+                                    <label class="col-lg-3 col-form-label font-weight-semibold">Nama <span
                                             class="text-danger">*</span></label>
                                     <div class="col-lg-9">
                                         <input name="name" value="{{ old('name') }}" required type="text"
@@ -92,7 +92,7 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="term" class="col-lg-3 col-form-label font-weight-semibold">Term</label>
+                                    <label for="term" class="col-lg-3 col-form-label font-weight-semibold">Aturan</label>
                                     <div class="col-lg-9">
                                         <select data-placeholder="Select Teacher" class="form-control select-search"
                                             name="term" id="term">

@@ -88,7 +88,7 @@
                         <th>Nama</th>
                         <th>No ADM</th>
                         <th>Tingkat Kelas</th>
-                        <th>Tahun Kelas</th>
+                        <th>Tahun Lulus</th>
                         <th>Action</th>
                     </tr>
                     </thead>
