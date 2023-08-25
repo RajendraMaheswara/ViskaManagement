@@ -83,7 +83,7 @@
                             <form method="post" action="{{ route('exams.store') }}">
                                 @csrf
                                 <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label font-weight-semibold">Name <span
+                                    <label class="col-lg-3 col-form-label font-weight-semibold">Nama <span
                                             class="text-danger">*</span></label>
                                     <div class="col-lg-9">
                                         <input name="name" value="{{ old('name') }}" required type="text"
@@ -92,7 +92,8 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="term" class="col-lg-3 col-form-label font-weight-semibold">Term</label>
+                                    <label for="term"
+                                        class="col-lg-3 col-form-label font-weight-semibold">Ketentuan</label>
                                     <div class="col-lg-9">
                                         <select data-placeholder="Select Teacher" class="form-control select-search"
                                             name="term" id="term">
