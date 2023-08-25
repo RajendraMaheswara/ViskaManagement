@@ -29,49 +29,22 @@ class UsersTableSeeder extends Seeder
 
         $d = [
 
-            ['name' => 'Founder Viska',
+            ['name' => 'Superadmin Viska',
                 'email' => 'superadmin@gmail.com',
-                'username' => 'FV',
+                'username' => 'Super Admin',
                 'password' => $password,
                 'user_type' => 'super_admin',
                 'code' => strtoupper(Str::random(10)),
                 'remember_token' => Str::random(10),
             ],
 
-            ['name' => 'Admin KORA',
-            'email' => 'admin@admin.com',
+            ['name' => 'Admin Viska',
+            'email' => 'admin@gmail.com',
             'password' => $password,
             'user_type' => 'admin',
             'username' => 'Admin',
             'code' => strtoupper(Str::random(10)),
             'remember_token' => Str::random(10),
-            ],
-
-            ['name' => 'Guru Viska',
-                'email' => 'guru@gmail.com',
-                'user_type' => 'teacher',
-                'username' => 'Guru',
-                'password' => $password,
-                'code' => strtoupper(Str::random(10)),
-                'remember_token' => Str::random(10),
-            ],
-
-            ['name' => 'Orang Tua',
-                'email' => 'orangtua@gmail.com',
-                'user_type' => 'parent',
-                'username' => 'Orang Tua',
-                'password' => $password,
-                'code' => strtoupper(Str::random(10)),
-                'remember_token' => Str::random(10),
-            ],
-
-            ['name' => 'Accountant Viska',
-                'email' => 'accountant@gmail.com',
-                'user_type' => 'accountant',
-                'username' => 'Accountant',
-                'password' => $password,
-                'code' => strtoupper(Str::random(10)),
-                'remember_token' => Str::random(10),
             ],
         ];
         DB::table('users')->insert($d);
