@@ -25,13 +25,13 @@ class UsersTableSeeder extends Seeder
 
     protected function createNewUsers()
     {
-        $password = Hash::make('cj'); // Default user password
+        $password = Hash::make('123456'); // Default user password
 
         $d = [
 
-            ['name' => 'CJ Inspired',
-                'email' => 'cj@cj.com',
-                'username' => 'cj',
+            ['name' => 'Founder Viska',
+                'email' => 'superadmin@gmail.com',
+                'username' => 'FV',
                 'password' => $password,
                 'user_type' => 'super_admin',
                 'code' => strtoupper(Str::random(10)),
@@ -42,33 +42,33 @@ class UsersTableSeeder extends Seeder
             'email' => 'admin@admin.com',
             'password' => $password,
             'user_type' => 'admin',
-            'username' => 'admin',
+            'username' => 'Admin',
             'code' => strtoupper(Str::random(10)),
             'remember_token' => Str::random(10),
             ],
 
-            ['name' => 'Teacher Chike',
-                'email' => 'teacher@teacher.com',
+            ['name' => 'Guru Viska',
+                'email' => 'guru@gmail.com',
                 'user_type' => 'teacher',
-                'username' => 'teacher',
+                'username' => 'Guru',
                 'password' => $password,
                 'code' => strtoupper(Str::random(10)),
                 'remember_token' => Str::random(10),
             ],
 
-            ['name' => 'Parent Kaba',
-                'email' => 'parent@parent.com',
+            ['name' => 'Orang Tua',
+                'email' => 'orangtua@gmail.com',
                 'user_type' => 'parent',
-                'username' => 'parent',
+                'username' => 'Orang Tua',
                 'password' => $password,
                 'code' => strtoupper(Str::random(10)),
                 'remember_token' => Str::random(10),
             ],
 
-            ['name' => 'Accountant Jeff',
-                'email' => 'accountant@accountant.com',
+            ['name' => 'Accountant Viska',
+                'email' => 'accountant@gmail.com.com',
                 'user_type' => 'accountant',
-                'username' => 'accountant',
+                'username' => 'Accountant',
                 'password' => $password,
                 'code' => strtoupper(Str::random(10)),
                 'remember_token' => Str::random(10),
