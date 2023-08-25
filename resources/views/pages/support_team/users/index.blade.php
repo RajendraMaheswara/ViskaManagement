@@ -10,7 +10,7 @@
 
         <div class="card-body">
             <ul class="nav nav-tabs nav-tabs-highlight">
-                <li class="nav-item"><a href="#new-user" class="nav-link active" data-toggle="tab">Create New User</a></li>
+                <li class="nav-item"><a href="#new-user" class="nav-link active" data-toggle="tab">Tambah User</a></li>
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Manage Users</a>
                     <div class="dropdown-menu dropdown-menu-right">
@@ -41,15 +41,15 @@
 
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>Full Name: <span class="text-danger">*</span></label>
-                                        <input value="{{ old('name') }}" required type="text" name="name" placeholder="Full Name" class="form-control">
+                                        <label>Nama Lengkap: <span class="text-danger">*</span></label>
+                                        <input value="{{ old('name') }}" required type="text" name="name" placeholder="Nama Lenfkap" class="form-control">
                                     </div>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Address: <span class="text-danger">*</span></label>
-                                        <input value="{{ old('address') }}" class="form-control" placeholder="Address" name="address" type="text" required>
+                                        <label>Alamat: <span class="text-danger">*</span></label>
+                                        <input value="{{ old('address') }}" class="form-control" placeholder="Alamat" name="address" type="text" required>
                                     </div>
                                 </div>
                             </div>
@@ -57,7 +57,7 @@
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label>Email address: </label>
+                                        <label>Email: </label>
                                         <input value="{{ old('email') }}" type="email" name="email" class="form-control" placeholder="your@email.com">
                                     </div>
                                 </div>
@@ -71,15 +71,15 @@
 
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label>Phone:</label>
-                                        <input value="{{ old('phone') }}" type="text" name="phone" class="form-control" placeholder="+2341234567" >
+                                        <label>No Handphone:</label>
+                                        <input value="{{ old('phone') }}" type="text" name="phone" class="form-control" placeholder="08xxxxxxxx" >
                                     </div>
                                 </div>
 
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label>Telephone:</label>
-                                        <input value="{{ old('phone2') }}" type="text" name="phone2" class="form-control" placeholder="+2341234567" >
+                                        <label>No Handphone Orang Tua:</label>
+                                        <input value="{{ old('phone2') }}" type="text" name="phone2" class="form-control" placeholder="08xxxxxxxx" >
                                     </div>
                                 </div>
 
@@ -88,7 +88,7 @@
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label>Date of Employment:</label>
+                                        <label>Tanggal Didaftarkan:</label>
                                         <input autocomplete="off" name="emp_date" value="{{ old('emp_date') }}" type="text" class="form-control date-pick" placeholder="Select Date...">
 
                                     </div>
@@ -103,19 +103,19 @@
 
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label for="gender">Gender: <span class="text-danger">*</span></label>
-                                        <select class="select form-control" id="gender" name="gender" required data-fouc data-placeholder="Pilih ....">
+                                        <label for="gender">Jenis Kelamin: <span class="text-danger">*</span></label>
+                                        <select class="select form-control" id="gender" name="gender" required data-fouc data-placeholder="Pilih Jenis Kelamin">
                                             <option value=""></option>
-                                            <option {{ (old('gender') == 'Male') ? 'selected' : '' }} value="Male">Male</option>
-                                            <option {{ (old('gender') == 'Female') ? 'selected' : '' }} value="Female">Female</option>
+                                            <option {{ (old('gender') == 'Male') ? 'selected' : '' }} value="Male">Laki-Laki</option>
+                                            <option {{ (old('gender') == 'Female') ? 'selected' : '' }} value="Female">Perempuan</option>
                                         </select>
                                     </div>
                                 </div>
 
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label for="nal_id">Nationality: <span class="text-danger">*</span></label>
-                                        <select data-placeholder="Pilih ....." required name="nal_id" id="nal_id" class="select-search form-control">
+                                        <label for="nal_id">Provinsi: <span class="text-danger">*</span></label>
+                                        <select data-placeholder="Pilih Provinsi" required name="nal_id" id="nal_id" class="select-search form-control">
                                             <option value=""></option>
                                             @foreach($nationals as $nal)
                                                 <option {{ (old('nal_id') == $nal->id ? 'selected' : '') }} value="{{ $nal->id }}">{{ $nal->name }}</option>
@@ -128,8 +128,8 @@
                             <div class="row">
                                 {{--State--}}
                                 <div class="col-md-4">
-                                    <label for="state_id">State: <span class="text-danger">*</span></label>
-                                    <select onchange="getLGA(this.value)" required data-placeholder="Pilih ...." class="select-search form-control" name="state_id" id="state_id">
+                                    <label for="state_id">Kabupaten: <span class="text-danger">*</span></label>
+                                    <select onchange="getLGA(this.value)" required data-placeholder="Pilih Kabupaten" class="select-search form-control" name="state_id" id="state_id">
                                         <option value=""></option>
                                         @foreach($states as $st)
                                             <option {{ (old('state_id') == $st->id ? 'selected' : '') }} value="{{ $st->id }}">{{ $st->name }}</option>
@@ -138,8 +138,8 @@
                                 </div>
                                 {{--LGA--}}
                                 <div class="col-md-4">
-                                    <label for="lga_id">LGA: <span class="text-danger">*</span></label>
-                                    <select required data-placeholder="Select State First" class="select-search form-control" name="lga_id" id="lga_id">
+                                    <label for="lga_id">Kecamatan: <span class="text-danger">*</span></label>
+                                    <select required data-placeholder="Pilih Kabupaten terlebih dahulu" class="select-search form-control" name="lga_id" id="lga_id">
                                         <option value=""></option>
                                     </select>
                                 </div>
@@ -147,7 +147,7 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="bg_id">Golongan Darah : </label>
-                                        <select class="select form-control" id="bg_id" name="bg_id" data-fouc data-placeholder="Pilih ....">
+                                        <select class="select form-control" id="bg_id" name="bg_id" data-fouc data-placeholder="Pilih Gol Darah">
                                             <option value=""></option>
                                             @foreach($blood_groups as $bg)
                                                 <option {{ (old('bg_id') == $bg->id ? 'selected' : '') }} value="{{ $bg->id }}">{{ $bg->name }}</option>
@@ -164,7 +164,7 @@
                                     <div class="form-group">
                                         <label class="d-block">Upload Foto Identitas :</label>
                                         <input value="{{ old('photo') }}" accept="image/*" type="file" name="photo" class="form-input-styled" data-fouc>
-                                        <span class="form-text text-muted">Accepted Images: jpeg, png. Max file size 2Mb</span>
+                                        <span class="form-text text-muted">Mendukung Format: jpeg, png. Max file size 2Mb</span>
                                     </div>
                                 </div>
                             </div>
@@ -180,11 +180,11 @@
                     <div class="tab-pane fade" id="ut-{{Qs::hash($ut->id)}}">                         <table class="table datatable-button-html5-columns">
                             <thead>
                             <tr>
-                                <th>S/N</th>
+                                <th>No</th>
                                 <th>Photo</th>
-                                <th>Name</th>
+                                <th>Nama</th>
                                 <th>Username</th>
-                                <th>Phone</th>
+                                <th>No Handphone</th>
                                 <th>Email</th>
                                 <th>Action</th>
                             </tr>
@@ -207,7 +207,7 @@
 
                                                 <div class="dropdown-menu dropdown-menu-left">
                                                     {{--View Profile--}}
-                                                    <a href="{{ route('users.show', Qs::hash($u->id)) }}" class="dropdown-item"><i class="icon-eye"></i> View Profile</a>
+                                                    <a href="{{ route('users.show', Qs::hash($u->id)) }}" class="dropdown-item"><i class="icon-eye"></i> Lihat Profil</a>
                                                     {{--Edit--}}
                                                     <a href="{{ route('users.edit', Qs::hash($u->id)) }}" class="dropdown-item"><i class="icon-pencil"></i> Edit</a>
                                                 @if(Qs::userIsSuperAdmin())

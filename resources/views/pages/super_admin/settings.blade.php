@@ -14,13 +14,13 @@
             <div class="row">
                 <div class="col-md-6 border-right-2 border-right-blue-400">
                         <div class="form-group row">
-                            <label class="col-lg-3 col-form-label font-weight-semibold">Name of School <span class="text-danger">*</span></label>
+                            <label class="col-lg-3 col-form-label font-weight-semibold">Nama Sekolah <span class="text-danger">*</span></label>
                             <div class="col-lg-9">
                                 <input name="system_name" value="{{ $s['system_name'] }}" required type="text" class="form-control" placeholder="Name of School">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="current_session" class="col-lg-3 col-form-label font-weight-semibold">Current Session <span class="text-danger">*</span></label>
+                            <label for="current_session" class="col-lg-3 col-form-label font-weight-semibold">Current Waktu <span class="text-danger">*</span></label>
                             <div class="col-lg-9">
                                 <select data-placeholder="Pilih ....." required name="current_session" id="current_session" class="select-search form-control">
                                     <option value=""></option>
@@ -43,13 +43,13 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-lg-3 col-form-label font-weight-semibold">School Email</label>
+                            <label class="col-lg-3 col-form-label font-weight-semibold">Email Sekolah</label>
                             <div class="col-lg-9">
                                 <input name="system_email" value="{{ $s['system_email'] }}" type="email" class="form-control" placeholder="School Email">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-lg-3 col-form-label font-weight-semibold">School Address <span class="text-danger">*</span></label>
+                            <label class="col-lg-3 col-form-label font-weight-semibold">Alamat Sekolah <span class="text-danger">*</span></label>
                             <div class="col-lg-9">
                                 <input required name="address" value="{{ $s['address'] }}" type="text" class="form-control" placeholder="School Address">
                             </div>
