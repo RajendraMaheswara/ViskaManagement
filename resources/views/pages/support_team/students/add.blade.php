@@ -1,29 +1,29 @@
 @extends('layouts.master')
-@section('page_title', 'Admit Student')
+@section('page_title', 'Daftarkan Murid')
 @section('content')
         <div class="card">
             <div class="card-header bg-white header-elements-inline">
-                <h6 class="card-title">Please fill The form Below To Admit A New Student</h6>
+                <h6 class="card-title">Isi data berikut untuk mendaftarkan</h6>
 
                 {!! Qs::getPanelOptions() !!}
             </div>
 
             <form id="ajax-reg" method="post" enctype="multipart/form-data" class="wizard-form steps-validation" action="{{ route('students.store') }}" data-fouc>
                @csrf
-                <h6>Personal data</h6>
+                <h6>Data Pribadi</h6>
                 <fieldset>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Full Name: <span class="text-danger">*</span></label>
-                                <input value="{{ old('name') }}" required type="text" name="name" placeholder="Full Name" class="form-control">
+                                <label>Nama Lengkap: <span class="text-danger">*</span></label>
+                                <input value="{{ old('name') }}" required type="text" name="name" placeholder="Nama Lengkap" class="form-control">
                                 </div>
                             </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Address: <span class="text-danger">*</span></label>
-                                <input value="{{ old('address') }}" class="form-control" placeholder="Address" name="address" type="text" required>
+                                <label>Alamat: <span class="text-danger">*</span></label>
+                                <input value="{{ old('address') }}" class="form-control" placeholder="Alamat" name="address" type="text" required>
                             </div>
                         </div>
                     </div>
@@ -31,32 +31,32 @@
                     <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>Email address: </label>
-                                <input type="email" value="{{ old('email') }}" name="email" class="form-control" placeholder="Email Address">
+                                <label>Email: </label>
+                                <input type="email" value="{{ old('email') }}" name="email" class="form-control" placeholder="Email ">
                             </div>
                         </div>
 
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label for="gender">Gender: <span class="text-danger">*</span></label>
-                                <select class="select form-control" id="gender" name="gender" required data-fouc data-placeholder="Choose..">
+                                <label for="gender">Jenis Kelamin: <span class="text-danger">*</span></label>
+                                <select class="select form-control" id="gender" name="gender" required data-fouc data-placeholder="Pilih Jenis Kelamin">
                                     <option value=""></option>
-                                    <option {{ (old('gender') == 'Male') ? 'selected' : '' }} value="Male">Male</option>
-                                    <option {{ (old('gender') == 'Female') ? 'selected' : '' }} value="Female">Female</option>
+                                    <option {{ (old('gender') == 'Male') ? 'selected' : '' }} value="Male">Laki-Laki</option>
+                                    <option {{ (old('gender') == 'Female') ? 'selected' : '' }} value="Female">Perempuan</option>
                                 </select>
                             </div>
                         </div>
 
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>Phone:</label>
+                                <label>No Handphone:</label>
                                 <input value="{{ old('phone') }}" type="text" name="phone" class="form-control" placeholder="" >
                             </div>
                         </div>
 
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>Telephone:</label>
+                                <label>No Handphone Orang Tua:</label>
                                 <input value="{{ old('phone2') }}" type="text" name="phone2" class="form-control" placeholder="" >
                             </div>
                         </div>
@@ -66,16 +66,16 @@
                     <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>Date of Birth:</label>
-                                <input name="dob" value="{{ old('dob') }}" type="text" class="form-control date-pick" placeholder="Select Date...">
+                                <label>Tanggal Lahir:</label>
+                                <input name="dob" value="{{ old('dob') }}" type="text" class="form-control date-pick" placeholder="Pilih Tanggal">
 
                             </div>
                         </div>
 
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label for="nal_id">Nationality: <span class="text-danger">*</span></label>
-                                <select data-placeholder="Choose..." required name="nal_id" id="nal_id" class="select-search form-control">
+                                <label for="nal_id">Provinsi: <span class="text-danger">*</span></label>
+                                <select data-placeholder="Pilih" required name="nal_id" id="nal_id" class="select-search form-control">
                                     <option value=""></option>
                                     @foreach($nationals as $nal)
                                         <option {{ (old('nal_id') == $nal->id ? 'selected' : '') }} value="{{ $nal->id }}">{{ $nal->name }}</option>
@@ -85,8 +85,8 @@
                         </div>
 
                         <div class="col-md-3">
-                            <label for="state_id">State: <span class="text-danger">*</span></label>
-                            <select onchange="getLGA(this.value)" required data-placeholder="Choose.." class="select-search form-control" name="state_id" id="state_id">
+                            <label for="state_id">Kabupaten: <span class="text-danger">*</span></label>
+                            <select onchange="getLGA(this.value)" required data-placeholder="Pilih Kabupaten" class="select-search form-control" name="state_id" id="state_id">
                                 <option value=""></option>
                                 @foreach($states as $st)
                                     <option {{ (old('state_id') == $st->id ? 'selected' : '') }} value="{{ $st->id }}">{{ $st->name }}</option>
@@ -95,8 +95,8 @@
                         </div>
 
                         <div class="col-md-3">
-                            <label for="lga_id">LGA: <span class="text-danger">*</span></label>
-                            <select required data-placeholder="Select State First" class="select-search form-control" name="lga_id" id="lga_id">
+                            <label for="lga_id">Kecamatan: <span class="text-danger">*</span></label>
+                            <select required data-placeholder="Pilih terlebih dahulu Kabupaten" class="select-search form-control" name="lga_id" id="lga_id">
                                 <option value=""></option>
                             </select>
                         </div>

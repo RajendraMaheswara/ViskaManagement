@@ -5,7 +5,7 @@
 </head>
 <body>
 <div class="container">
-    <div id="print" xmlns:margin-top="http://www.w3.org/1999/xhtml">
+    <div id="print" xmlns:margin-top="http://www.w3.org/1999/xhtml" class="margin-auto">
         {{--  School Details--}}
         <table width="100%">
             <tr>
@@ -18,7 +18,7 @@
                                 style="color: #000; font-size: 15px;"><i>{{ ucwords($s['address']) }}</i></span></strong>
                     <br/> <br/>
 
-                     <span style="color: #000; font-weight: bold; font-size: 25px;"> PAYMENT RECEIPT</span>
+                     <span style="color: #000; font-weight: bold; font-size: 25px;"> KWITANSI PEMBAYARAN</span>
                 </td>
             </tr>
         </table>
@@ -32,7 +32,7 @@
         {{--Receipt No --}}
     <div class="bold arial" style="text-align: center; float:right; width: 200px; padding: 5px; margin-right:30px">
         <div style="padding: 10px 20px; width: 200px; background-color: lightcyan;">
-            <span  style="font-size: 16px;">Receipt Reference No.</span>
+            <span  style="font-size: 16px;">No. Referensi Kwitansi</span>
         </div>
         <div  style="padding: 10px 20px; width: 200px; background-color: lightyellow;">
             <span  style="font-size: 25px;">{{ $pr->ref_no }}</span>
@@ -43,7 +43,7 @@
 
         {{-- Student Info --}}
         <div style="margin-top:5px; display: block; background-color: rgba(92, 172, 237, 0.12); padding: 5px; ">
-            <span style="font-weight:bold; font-size: 20px; color: #000; padding-left: 10px">STUDENT INFORMATION</span>
+            <span style="font-weight:bold; font-size: 20px; color: #000; padding-left: 10px">Informasi Murid</span>
         </div>
 
         {{--Photo--}}
@@ -54,15 +54,15 @@
        <div style="float: left; margin-left: 20px">
            <table style="font-size: 16px" class="td-left" cellspacing="5" cellpadding="5">
                <tr>
-                   <td class="bold">NAME:</td>
+                   <td class="bold">NAMA:</td>
                    <td>{{ $sr->user->name }}</td>
                </tr>
                <tr>
-                   <td class="bold">ADM_NO:</td>
+                   <td class="bold">NO ADM:</td>
                    <td>{{ $sr->adm_no }}</td>
                </tr>
                <tr>
-                   <td class="bold">CLASS:</td>
+                   <td class="bold">KELAS:</td>
                    <td>{{ $sr->my_class->name }}</td>
                </tr>
            </table>
@@ -71,18 +71,18 @@
 
         {{-- Payment Info --}}
         <div style="margin-top:5px; display: block; background-color: rgba(92, 172, 237, 0.12); padding: 5px; ">
-            <span style="font-weight:bold; font-size: 20px; color: #000; padding-left: 10px">PAYMENT INFORMATION</span>
+            <span style="font-weight:bold; font-size: 20px; color: #000; padding-left: 10px">INFORMASI PEMBAYARAN</span>
         </div>
 
         <table class="td-left" style="font-size: 16px" cellspacing="2" cellpadding="2">
                 <tr>
-                    <td class="bold">REFERENCE:</td>
+                    <td class="bold">REFERENSI:</td>
                     <td>{{ $payment->ref_no }}</td>
-                    <td class="bold">TITLE:</td>
+                    <td class="bold">JUDUL:</td>
                     <td>{{ $payment->title }}</td>
                 </tr>
                 <tr>
-                    <td class="bold">AMOUNT:</td>
+                    <td class="bold">JUMLAH:</td>
                     <td>{{ $payment->amount }}</td>
                     <td class="bold">DESCRIPTION:</td>
                     <td>{{ $payment->description }}</td>
@@ -91,15 +91,15 @@
 
         {{-- Payment Desc --}}
         <div style="margin-top:5px; display: block; background-color: rgba(92, 172, 237, 0.12); padding: 5px; ">
-            <span style="font-weight:bold; font-size: 20px; color: #000; padding-left: 10px">DESCRIPTION</span>
+            <span style="font-weight:bold; font-size: 20px; color: #000; padding-left: 10px">DESKRIPSI</span>
         </div>
 
         <table class="td-left" style="font-size: 16px" width="100%" cellspacing="2" cellpadding="2">
            <thead>
            <tr>
-               <td class="bold">Date</td>
-               <td class="bold">Amount Paid <del style="text-decoration-style: double">N</del></td>
-               <td class="bold">Balance <del style="text-decoration-style: double">N</del></td>
+               <td class="bold">Tanggal</td>
+               <td class="bold">Jumlah Dibayarkan </td>
+               <td class="bold">Sisa </td>
            </tr>
            </thead>
             <tbody>
@@ -116,10 +116,10 @@
         <hr>
         <div class="bold arial" style="text-align: center; float:right; width: 200px; padding: 5px; margin-right:30px">
             <div style="padding: 10px 20px; width: 200px; background-color: lightcyan;">
-                <span  style="font-size: 16px;">{{ $pr->paid ? 'PAYMENT STATUS' : 'TOTAL DUE' }}</span>
+                <span  style="font-size: 16px;">{{ $pr->paid ? 'STATUS PEMBAYARAN' : 'TOTAL BAYAR' }}</span>
             </div>
             <div  style="padding: 10px 20px; width: 200px; background-color: lightyellow;">
-                <span  style="font-size: 25px;">{{ $pr->paid ? 'CLEARED' : $pr->balance }}</span>
+                <span  style="font-size: 25px;">{{ $pr->paid ? 'BERHASIL' : $pr->balance }}</span>
             </div>
         </div>
         <div class="clear"></div>

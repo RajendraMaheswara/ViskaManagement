@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('page_title', 'Manage TimeTable Record')
+@section('page_title', 'Manage Daftar Jadwal')
 @section('content')
 
     <div class="card">
