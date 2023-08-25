@@ -40,11 +40,11 @@
                         <td>{{ $p->fc->name.' '.$p->fs->name }}</td>
                         <td>{{ $p->tc->name.' '.$p->ts->name }}</td>
                         @if($p->status === 'P')
-                            <td><span class="text-success">Promoted</span></td>
+                            <td><span class="text-success">Naik</span></td>
                         @elseif($p->status === 'D')
-                            <td><span class="text-danger">Not Promoted</span></td>
+                            <td><span class="text-danger">Tidak Naik</span></td>
                         @else
-                            <td><span class="text-primary">Graduated</span></td>
+                            <td><span class="text-primary">Lulus</span></td>
                         @endif
                         <td class="text-center">
                             <button data-id="{{ $p->id }}" class="btn btn-danger promotion-reset">Reset</button>

@@ -113,12 +113,12 @@
                         <table class="table datatable-button-html5-columns">
                             <thead>
                             <tr>
-                                <th>#</th>
-                                <th>Title</th>
-                                <th>Amount</th>
-                                <th>Ref_No</th>
-                                <th>Class</th>
-                                <th>Method</th>
+                                <th>No</th>
+                                <th>Judul</th>
+                                <th>Jumlah</th>
+                                <th>No Ref</th>
+                                <th>Kelas</th>
+                                <th>Metode</th>
                                 <th>Info</th>
                                 <th>Action</th>
                             </tr>

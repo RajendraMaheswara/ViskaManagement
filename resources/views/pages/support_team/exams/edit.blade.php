@@ -27,9 +27,9 @@
                             <div class="col-lg-9">
                                 <select data-placeholder="Select Teacher" class="form-control select-search" name="term"
                                     id="term">
-                                    <option {{ $ex->term == 1 ? 'selected' : '' }} value="1">First Term</option>
-                                    <option {{ $ex->term == 2 ? 'selected' : '' }} value="2">Second Term</option>
-                                    <option {{ $ex->term == 3 ? 'selected' : '' }} value="3">Third Term</option>
+                                    <option {{ $ex->term == 1 ? 'selected' : '' }} value="1">Semester Awal</option>
+                                    <option {{ $ex->term == 2 ? 'selected' : '' }} value="2">Semester Tengah</option>
+                                    <option {{ $ex->term == 3 ? 'selected' : '' }} value="3">Semester Akhir</option>
                                 </select>
                             </div>
                         </div>
