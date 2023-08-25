@@ -30,8 +30,8 @@
 
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="section_id" class="col-form-label font-weight-bold">Tingkat Kelas :</label>
-                                            <select required id="section_id" name="section_id" data-placeholder="Select Class First" class="form-control select">
+                                            <label for="section_id" class="col-form-label font-weight-bold">Tingkat Kelas:</label>
+                                            <select required id="section_id" name="section_id" data-placeholder="Pilih Kelas terlebih dahulu" class="form-control select">
                                         @if($selected)
                                             @foreach($sections as $s)
                                                     <option {{ ($section_id == $s->id ? 'selected' : '') }} value="{{ $s->id }}">{{ $s->name }}</option>

@@ -15,9 +15,13 @@ class DormitoriesTableSeeder extends Seeder
     {
         DB::table('dormitories')->delete();
         $data = [
-            ['name' => 'Asrama 1'],
-            ['name' => 'Asrama 2'],
-            ['name' => 'Asrama 3'],
+            ['name' => 'Lab RPL'],
+            ['name' => 'Lab AKL'],
+            ['name' => 'Lab OTKP'],
+            ['name' => 'Lab PM'],
+            ['name' => 'Lab UPW'],
+            ['name' => 'Lab MM'],
+            ['name' => 'Lab PFPT'],
         ];
         DB::table('dormitories')->insert($data);
     }
