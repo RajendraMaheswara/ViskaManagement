@@ -13,13 +13,12 @@ class LgasTableSeeder extends Seeder
     {
         DB::table('lgas')->delete();
 
-        $state_id = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+        $state_id = [1, 1, 1, 1, 1
         ];
 
         $lgas = [
-            "Banjarnegara", "Batur", "Bawang", "Kalibening", "Karangkobar", "Madukara", "Mandiraja", "Pagedongan", "Pagentan", "Pandanarum", "Pejawaran", "Punggelan", "Purwonegoro", "Purworejo Klampok", "Rakit", "Sigaluh", "Susukan", "Wanadadi", "Wanayasa"
+            'Banjarsari', 'Jebres', 'Laweyan', 'Pasar Kliwon', 'Serengan'
         ];
-
         for($i=0; $i<count($lgas); $i++){
             Lga::create(['state_id' => $state_id[$i], 'name' => $lgas[$i]]);
         }
