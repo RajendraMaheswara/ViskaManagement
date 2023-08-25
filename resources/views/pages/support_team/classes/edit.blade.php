@@ -14,7 +14,7 @@
                     <form class="ajax-update" data-reload="#page-header" method="post" action="{{ route('classes.update', $c->id) }}">
                         @csrf @method('PUT')
                         <div class="form-group row">
-                            <label class="col-lg-3 col-form-label font-weight-semibold">Name <span class="text-danger">*</span></label>
+                            <label class="col-lg-3 col-form-label font-weight-semibold">Nama <span class="text-danger">*</span></label>
                             <div class="col-lg-9">
                                 <input name="name" value="{{ $c->name }}" required type="text" class="form-control" placeholder="Name of Class">
                             </div>
@@ -35,7 +35,7 @@
                       --}}
 
                         <div class="form-group row">
-                            <label for="class_type_id" class="col-lg-3 col-form-label font-weight-semibold">Class Type</label>
+                            <label for="class_type_id" class="col-lg-3 col-form-label font-weight-semibold">Divisi</label>
                             <div class="col-lg-9">
                                 <input class="form-control" disabled="disabled" value="{{ $c->class_type->name }}" title="Class Type" type="text">
                             </div>

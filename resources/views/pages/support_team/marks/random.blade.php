@@ -3,29 +3,23 @@
     <table class="table table-striped">
         <thead>
         <tr>
-            <th>S/N</th>
-            <th>Name</th>
-            <th>ADM_NO</th>
-            @if($class_type->code == 'J')
-                <th>1ST CA (10)</th>
-                <th>MT CA (20)</th>
-                <th>2ND CA (10)</th>
-                <th>EXAM (60)</th>
+            <th>No</th>
+            <th>Nama</th>
+            <th>No ADM</th>
+            @if($class_type->code == 'O')
+                <th>Tugas 1 (20)</th>
+                <th>Tugas 2 (20)</th>
+                <th>Ujian(60)</th>
             @endif
-            @if($class_type->code == 'S')
-                <th>1ST CA (15)</th>
-                <th>2ND CA (15)</th>
-                <th>EXAM (70)</th>
+            @if($class_type->code == 'T')
+                <th>Tugas 1 (20)</th>
+                <th>Tugas 2 (20)</th>
+                <th>Ujian (60)</th>
             @endif
-            @if($class_type->code == 'P')
-                <th>1ST CA </th>
-                <th>2ND CA </th>
-                <th>MT CA </th>
-                <th>EXAM</th>
-            @endif
-            @if($class_type->code == 'N')
-                <th>TEST </th>
-                <th>EXAM</th>
+            @if($class_type->code == 'TH')
+                <th>Tugas 1 </th>
+                <th>Tugas 2  </th>
+                <th>Ujian</th>
             @endif
         </tr>
         </thead>

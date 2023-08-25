@@ -13,7 +13,7 @@
                 <li class="nav-item"><a href="#new-subject" class="nav-link active" data-toggle="tab">Tambah Mata Pelajaran</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Manage Subjects</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Manage Mata Pelajaran</a>
                     <div class="dropdown-menu dropdown-menu-right">
                         @foreach ($my_classes as $c)
                             <a href="#c{{ $c->id }}" class="dropdown-item" data-toggle="tab">{{ $c->name }}</a>
@@ -42,7 +42,7 @@
                                         <span class="text-danger">*</span></label>
                                     <div class="col-lg-9">
                                         <input id="slug" required name="slug" value="{{ old('slug') }}"
-                                            type="text" class="form-control" placeholder="Matematika = MTK ">
+                                            type="text" class="form-control" placeholder="* Matematika = MTK ">
                                     </div>
                                 </div>
 

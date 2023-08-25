@@ -22,7 +22,7 @@ class NationalitiesTableSeeder extends Seeder
             // 'Kalimantan Tengah', 'Kalimantan Selatan', 'Kalimantan Timur', 'Kalimantan Utara', 
             // 'Sulawesi Utara', 'Gorontalo', 'Sulawesi Tengah', 'Sulawesi Barat', 'Sulawesi Selatan', 
             // 'Sulawesi Tenggara', 'Maluku', 'Maluku Utara', 'Papua Barat', 'Papua'
-            'Jawa Tengah', 'Jawa Barat', 'Jawa Barat'
+            'Jawa Tengah', 'Jawa Barat', 'Jawa Timur'
         );
         foreach ($nationals as $n) {
             Nationality::create(['name' => $n]);
