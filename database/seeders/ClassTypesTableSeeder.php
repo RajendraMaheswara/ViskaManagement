@@ -20,7 +20,6 @@ class ClassTypesTableSeeder extends Seeder
             ['name' => '1', 'code' => 'O'],
             ['name' => '2', 'code' => 'T'],
             ['name' => '3', 'code' => 'TH'],
-            ['name' => '4', 'code' => 'F'],
         ];
 
         DB::table('class_types')->insert($data);
