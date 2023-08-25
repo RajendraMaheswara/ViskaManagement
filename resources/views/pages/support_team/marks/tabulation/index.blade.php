@@ -11,25 +11,60 @@
             <form method="post" action="{{ route('marks.tabulation_select') }}">
                 @csrf
                 <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="exam_id" class="col-form-label font-weight-bold">Ujian :</label>
+                                            <select required id="exam_id" name="exam_id" class="form-control select" data-placeholder="Pilih Ujian">
+                                                @foreach($exams as $exm)
+                                                    <option {{ ($selected && $exam_id == $exm->id) ? 'selected' : '' }} value="{{ $exm->id }}">{{ $exm->name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="my_class_id" class="col-form-label font-weight-bold">Kelas :</label>
+                                            <select onchange="getClassSections(this.value)" required id="my_class_id" name="my_class_id" class="form-control select" data-placeholder="Pilih Kelas">
+                                                <option value=""></option>
+                                                @foreach($my_classes as $c)
+                                                    <option {{ ($selected && $my_class_id == $c->id) ? 'selected' : '' }} value="{{ $c->id }}">{{ $c->name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="section_id" class="col-form-label font-weight-bold">Tingkat Kelas :</label>
+                                <select required id="section_id" name="section_id" data-placeholder="Pilih Kelas Terlebih Dahulu" class="form-control select">
+                                    @if($selected)
+                                        @foreach($sections->where('my_class_id', $my_class_id) as $s)
+                                            <option {{ $section_id == $s->id ? 'selected' : '' }} value="{{ $s->id }}">{{ $s->name }}</option>
+                                        @endforeach
+                                    @endif
+                                </select>
+                            </div>
 
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="exam_id" class="col-form-label font-weight-bold">Exam:</label>
+                            <label for="exam_id" class="col-form-label font-weight-bold">Ujian :</label>
                             <select required id="exam_id" name="exam_id" class="form-control select"
-                                data-placeholder="Select Exam">
+                                data-placeholder="Pilih Ujian">
                                 @foreach ($exams as $exm)
                                     <option {{ $selected && $exam_id == $exm->id ? 'selected' : '' }}
                                         value="{{ $exm->id }}">{{ $exm->name }}</option>
                                 @endforeach
                             </select>
+
                         </div>
                     </div>
 
                     <div class="col-md-3">
                         <div class="form-group">
-                            <label for="my_class_id" class="col-form-label font-weight-bold">Class:</label>
+                            <label for="my_class_id" class="col-form-label font-weight-bold">Kelas :</label>
                             <select onchange="getClassSections(this.value)" required id="my_class_id" name="my_class_id"
-                                class="form-control select" data-placeholder="Select Class">
+                                class="form-control select" data-placeholder="Plih Kelas">
                                 <option value=""></option>
                                 @foreach ($my_classes as $c)
                                     <option {{ $selected && $my_class_id == $c->id ? 'selected' : '' }}
@@ -41,7 +76,7 @@
 
                     <div class="col-md-3">
                         <div class="form-group">
-                            <label for="section_id" class="col-form-label font-weight-bold">Section:</label>
+                            <label for="section_id" class="col-form-label font-weight-bold">Section :</label>
                             <select required id="section_id" name="section_id" data-placeholder="Select Class First"
                                 class="form-control select">
                                 @if ($selected)

@@ -31,8 +31,12 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="my_class_id" class="col-form-label font-weight-bold">Kelas :</label>
+<<<<<<< HEAD
                                         <select required onchange="getClassSections(this.value)" id="my_class_id"
                                             name="my_class_id" class="form-control select">
+=======
+                                        <select required onchange="getClassSections(this.value)" id="my_class_id" name="my_class_id" class="form-control select">
+>>>>>>> cce7a299b4a8e2dba432f7e63798ee5e1c17fd5f
                                             <option value="">Select Class</option>
                                             @foreach ($my_classes as $c)
                                                 <option {{ $selected && $my_class_id == $c->id ? 'selected' : '' }}
@@ -44,6 +48,7 @@
 
                                 <div class="col-md-4">
                                     <div class="form-group">
+<<<<<<< HEAD
                                         <label for="section_id" class="col-form-label font-weight-bold">Tingkat Kelas
                                             :</label>
                                         <select required id="section_id" name="section_id"
@@ -52,6 +57,13 @@
                                                 @foreach ($sections->where('my_class_id', $my_class_id) as $s)
                                                     <option {{ $section_id == $s->id ? 'selected' : '' }}
                                                         value="{{ $s->id }}">{{ $s->name }}</option>
+=======
+                                        <label for="section_id" class="col-form-label font-weight-bold">Tingkat Kelas :</label>
+                                        <select required id="section_id" name="section_id" data-placeholder="Select Class First" class="form-control select">
+                                            @if($selected)
+                                                @foreach($sections->where('my_class_id', $my_class_id) as $s)
+                                                    <option {{ $section_id == $s->id ? 'selected' : '' }} value="{{ $s->id }}">{{ $s->name }}</option>
+>>>>>>> cce7a299b4a8e2dba432f7e63798ee5e1c17fd5f
                                                 @endforeach
                                             @endif
                                         </select>
