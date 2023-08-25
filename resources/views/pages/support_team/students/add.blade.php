@@ -105,8 +105,8 @@
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="bg_id">Blood Group: </label>
-                                <select class="select form-control" id="bg_id" name="bg_id" data-fouc data-placeholder="Choose..">
+                                <label for="bg_id">Golongan Darah : </label>
+                                <select class="select form-control" id="bg_id" name="bg_id" data-fouc data-placeholder="Pilih ....">
                                     <option value=""></option>
                                     @foreach(App\Models\BloodGroup::all() as $bg)
                                         <option {{ (old('bg_id') == $bg->id ? 'selected' : '') }} value="{{ $bg->id }}">{{ $bg->name }}</option>
@@ -117,7 +117,7 @@
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="d-block">Upload Passport Photo:</label>
+                                <label class="d-block">Upload Foto Identitas :</label>
                                 <input value="{{ old('photo') }}" accept="image/*" type="file" name="photo" class="form-input-styled" data-fouc>
                                 <span class="form-text text-muted">Accepted Images: jpeg, png. Max file size 2Mb</span>
                             </div>
@@ -131,8 +131,8 @@
                     <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label for="my_class_id">Class: <span class="text-danger">*</span></label>
-                                <select onchange="getClassSections(this.value)" data-placeholder="Choose..." required name="my_class_id" id="my_class_id" class="select-search form-control">
+                                <label for="my_class_id">Kelas : <span class="text-danger">*</span></label>
+                                <select onchange="getClassSections(this.value)" data-placeholder="Pilih ....." required name="my_class_id" id="my_class_id" class="select-search form-control">
                                     <option value=""></option>
                                     @foreach($my_classes as $c)
                                         <option {{ (old('my_class_id') == $c->id ? 'selected' : '') }} value="{{ $c->id }}">{{ $c->name }}</option>
@@ -143,7 +143,7 @@
 
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label for="section_id">Section: <span class="text-danger">*</span></label>
+                                <label for="section_id">Tingkat Kelas : <span class="text-danger">*</span></label>
                                 <select data-placeholder="Select Class First" required name="section_id" id="section_id" class="select-search form-control">
                                     <option {{ (old('section_id')) ? 'selected' : '' }} value="{{ old('section_id') }}">{{ (old('section_id')) ? 'Selected' : '' }}</option>
                                 </select>
@@ -152,8 +152,8 @@
 
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label for="my_parent_id">Parent: </label>
-                                <select data-placeholder="Choose..."  name="my_parent_id" id="my_parent_id" class="select-search form-control">
+                                <label for="my_parent_id">Orang Tua : </label>
+                                <select data-placeholder="Pilih ....."  name="my_parent_id" id="my_parent_id" class="select-search form-control">
                                     <option  value=""></option>
                                     @foreach($parents as $p)
                                         <option {{ (old('my_parent_id') == Qs::hash($p->id)) ? 'selected' : '' }} value="{{ Qs::hash($p->id) }}">{{ $p->name }}</option>
@@ -165,7 +165,7 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label for="year_admitted">Year Admitted: <span class="text-danger">*</span></label>
-                                <select data-placeholder="Choose..." required name="year_admitted" id="year_admitted" class="select-search form-control">
+                                <select data-placeholder="Pilih ....." required name="year_admitted" id="year_admitted" class="select-search form-control">
                                     <option value=""></option>
                                     @for($y=date('Y', strtotime('- 10 years')); $y<=date('Y'); $y++)
                                         <option {{ (old('year_admitted') == $y) ? 'selected' : '' }} value="{{ $y }}">{{ $y }}</option>
@@ -178,7 +178,7 @@
                     <div class="row">
                         <div class="col-md-3">
                             <label for="dorm_id">Dormitory: </label>
-                            <select data-placeholder="Choose..."  name="dorm_id" id="dorm_id" class="select-search form-control">
+                            <select data-placeholder="Pilih ....."  name="dorm_id" id="dorm_id" class="select-search form-control">
                                 <option value=""></option>
                                 @foreach($dorms as $d)
                                     <option {{ (old('dorm_id') == $d->id) ? 'selected' : '' }} value="{{ $d->id }}">{{ $d->name }}</option>

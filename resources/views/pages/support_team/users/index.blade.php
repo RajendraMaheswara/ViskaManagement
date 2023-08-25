@@ -30,8 +30,8 @@
                             <div class="row">
                                 <div class="col-md-2">
                                     <div class="form-group">
-                                        <label for="user_type"> Select User: <span class="text-danger">*</span></label>
-                                        <select required data-placeholder="Select User" class="form-control select" name="user_type" id="user_type">
+                                        <label for="user_type"> Pilih Role: <span class="text-danger">*</span></label>
+                                        <select required data-placeholder="Pilih Role" class="form-control select" name="user_type" id="user_type">
                                 @foreach($user_types as $ut)
                                     <option value="{{ Qs::hash($ut->id) }}">{{ $ut->name }}</option>
                                 @endforeach
@@ -104,7 +104,7 @@
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label for="gender">Gender: <span class="text-danger">*</span></label>
-                                        <select class="select form-control" id="gender" name="gender" required data-fouc data-placeholder="Choose..">
+                                        <select class="select form-control" id="gender" name="gender" required data-fouc data-placeholder="Pilih ....">
                                             <option value=""></option>
                                             <option {{ (old('gender') == 'Male') ? 'selected' : '' }} value="Male">Male</option>
                                             <option {{ (old('gender') == 'Female') ? 'selected' : '' }} value="Female">Female</option>
@@ -115,7 +115,7 @@
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label for="nal_id">Nationality: <span class="text-danger">*</span></label>
-                                        <select data-placeholder="Choose..." required name="nal_id" id="nal_id" class="select-search form-control">
+                                        <select data-placeholder="Pilih ....." required name="nal_id" id="nal_id" class="select-search form-control">
                                             <option value=""></option>
                                             @foreach($nationals as $nal)
                                                 <option {{ (old('nal_id') == $nal->id ? 'selected' : '') }} value="{{ $nal->id }}">{{ $nal->name }}</option>
@@ -129,7 +129,7 @@
                                 {{--State--}}
                                 <div class="col-md-4">
                                     <label for="state_id">State: <span class="text-danger">*</span></label>
-                                    <select onchange="getLGA(this.value)" required data-placeholder="Choose.." class="select-search form-control" name="state_id" id="state_id">
+                                    <select onchange="getLGA(this.value)" required data-placeholder="Pilih ...." class="select-search form-control" name="state_id" id="state_id">
                                         <option value=""></option>
                                         @foreach($states as $st)
                                             <option {{ (old('state_id') == $st->id ? 'selected' : '') }} value="{{ $st->id }}">{{ $st->name }}</option>
@@ -146,8 +146,8 @@
                                 {{--BLOOD GROUP--}}
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="bg_id">Blood Group: </label>
-                                        <select class="select form-control" id="bg_id" name="bg_id" data-fouc data-placeholder="Choose..">
+                                        <label for="bg_id">Golongan Darah : </label>
+                                        <select class="select form-control" id="bg_id" name="bg_id" data-fouc data-placeholder="Pilih ....">
                                             <option value=""></option>
                                             @foreach($blood_groups as $bg)
                                                 <option {{ (old('bg_id') == $bg->id ? 'selected' : '') }} value="{{ $bg->id }}">{{ $bg->name }}</option>
@@ -162,7 +162,7 @@
                                 {{--PASSPORT--}}
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label class="d-block">Upload Passport Photo:</label>
+                                        <label class="d-block">Upload Foto Identitas :</label>
                                         <input value="{{ old('photo') }}" accept="image/*" type="file" name="photo" class="form-input-styled" data-fouc>
                                         <span class="form-text text-muted">Accepted Images: jpeg, png. Max file size 2Mb</span>
                                     </div>

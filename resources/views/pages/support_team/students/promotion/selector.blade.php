@@ -7,7 +7,7 @@
                 <div class="row">
                     <div class="col-md-3">
                         <div class="form-group">
-                            <label for="fc" class="col-form-label font-weight-bold">From Class:</label>
+                            <label for="fc" class="col-form-label font-weight-bold">From Kelas :</label>
                             <select required onchange="getClassSections(this.value, '#fs')" id="fc" name="fc" class="form-control select">
                                 <option value="">Select Class</option>
                                 @foreach($my_classes as $c)
@@ -19,7 +19,7 @@
 
                     <div class="col-md-3">
                         <div class="form-group">
-                            <label for="fs" class="col-form-label font-weight-bold">From Section:</label>
+                            <label for="fs" class="col-form-label font-weight-bold">From Tingkat Kelas :</label>
                             <select required id="fs" name="fs" data-placeholder="Select Class First" class="form-control select">
                                 @if($selected && $fs)
                                     <option value="{{ $fs }}">{{ $sections->where('id', $fs)->first()->name }}</option>
@@ -30,7 +30,7 @@
 
                     <div class="col-md-3">
                         <div class="form-group">
-                            <label for="tc" class="col-form-label font-weight-bold">To Class:</label>
+                            <label for="tc" class="col-form-label font-weight-bold">To Kelas :</label>
                             <select required onchange="getClassSections(this.value, '#ts')" id="tc" name="tc" class="form-control select">
                                 <option value="">Select Class</option>
                                 @foreach($my_classes as $c)
@@ -42,7 +42,7 @@
 
                     <div class="col-md-3">
                         <div class="form-group">
-                            <label for="ts" class="col-form-label font-weight-bold">To Section:</label>
+                            <label for="ts" class="col-form-label font-weight-bold">To Tingkat Kelas :</label>
                             <select required id="ts" name="ts" data-placeholder="Select Class First" class="form-control select">
                                 @if($selected && $ts)
                                     <option value="{{ $ts }}">{{ $sections->where('id', $ts)->first()->name }}</option>
