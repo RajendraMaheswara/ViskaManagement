@@ -48,11 +48,7 @@
 
                     <div class="col-md-4">
                         <div class="form-group">
-<<<<<<< HEAD
-                            <label for="exam_id" class="col-form-label font-weight-bold">Ujian:</label>
-=======
                             <label for="exam_id" class="col-form-label font-weight-bold">Ujian :</label>
->>>>>>> 9ec2c5e97f64c29bba120664804f74eed33545cf
                             <select required id="exam_id" name="exam_id" class="form-control select"
                                 data-placeholder="Pilih Ujian">
                                 @foreach ($exams as $exm)
@@ -66,15 +62,9 @@
 
                     <div class="col-md-3">
                         <div class="form-group">
-<<<<<<< HEAD
-                            <label for="my_class_id" class="col-form-label font-weight-bold">Kelas:</label>
-                            <select onchange="getClassSections(this.value)" required id="my_class_id" name="my_class_id"
-                                class="form-control select" data-placeholder="Pilih Kelas">
-=======
                             <label for="my_class_id" class="col-form-label font-weight-bold">Kelas :</label>
                             <select onchange="getClassSections(this.value)" required id="my_class_id" name="my_class_id"
                                 class="form-control select" data-placeholder="Plih Kelas">
->>>>>>> 9ec2c5e97f64c29bba120664804f74eed33545cf
                                 <option value=""></option>
                                 @foreach ($my_classes as $c)
                                     <option {{ $selected && $my_class_id == $c->id ? 'selected' : '' }}
@@ -86,13 +76,8 @@
 
                     <div class="col-md-3">
                         <div class="form-group">
-<<<<<<< HEAD
                             <label for="section_id" class="col-form-label font-weight-bold">Tingkat Kelas:</label>
                             <select required id="section_id" name="section_id" data-placeholder="Pilih kelas terlebih dahulu"
-=======
-                            <label for="section_id" class="col-form-label font-weight-bold">Section :</label>
-                            <select required id="section_id" name="section_id" data-placeholder="Select Class First"
->>>>>>> 9ec2c5e97f64c29bba120664804f74eed33545cf
                                 class="form-control select">
                                 @if ($selected)
                                     @foreach ($sections->where('my_class_id', $my_class_id) as $s)

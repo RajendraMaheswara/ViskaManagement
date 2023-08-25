@@ -92,12 +92,7 @@
                                 </div>
 
                                 <div class="form-group row">
-<<<<<<< HEAD
-                                    <label for="term"
-                                        class="col-lg-3 col-form-label font-weight-semibold">Ketentuan</label>
-=======
                                     <label for="term" class="col-lg-3 col-form-label font-weight-semibold">Aturan</label>
->>>>>>> 73f3c4424a668ac15d63a56107fc3e0bdf390377
                                     <div class="col-lg-9">
                                         <select data-placeholder="Select Teacher" class="form-control select-search"
                                             name="term" id="term">
