@@ -1,19 +1,19 @@
 @extends('layouts.master')
-@section('page_title', 'Manage Promotions')
+@section('page_title', 'Manage Kenaikan')
 @section('content')
 
     {{--Reset All--}}
     <div class="card">
         <div class="card-body text-center
 ">
-            <button id="promotion-reset-all" class="btn btn-danger btn-large">Reset All Promotions for the Session</button>
+            <button id="promotion-reset-all" class="btn btn-danger btn-large">Reset Semua Kenaikan</button>
         </div>
     </div>
 
 {{-- Reset Promotions --}}
     <div class="card">
         <div class="card-header header-elements-inline">
-            <h5 class="card-title font-weight-bold">Manage Promotions - Students Who Were Promoted From <span class="text-danger">{{ $old_year }}</span> TO <span class="text-success">{{ $new_year }}</span> Session</h5>
+            <h5 class="card-title font-weight-bold">Atur Kenaikan - Murid Dinaikan dari <span class="text-danger">{{ $old_year }}</span> ke Tahun <span class="text-success">{{ $new_year }}</span></h5>
             {!! Qs::getPanelOptions() !!}
         </div>
 
