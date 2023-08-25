@@ -1,10 +1,10 @@
 @extends('layouts.master')
-@section('page_title', 'Manage Payments')
+@section('page_title', 'Manage Pembayaran')
 @section('content')
 
     <div class="card">
         <div class="card-header header-elements-inline">
-            <h5 class="card-title"><i class="icon-cash2 mr-2"></i> Select year</h5>
+            <h5 class="card-title"><i class="icon-cash2 mr-2"></i> Pilih Tahun</h5>
             {!! Qs::getPanelOptions() !!}
         </div>
 
@@ -16,7 +16,7 @@
                         <div class="row">
                             <div class="col-md-10">
                                 <div class="form-group">
-                                    <label for="year" class="col-form-label font-weight-bold">Select Year <span class="text-danger">*</span></label>
+                                    <label for="year" class="col-form-label font-weight-bold">Pilih Tahun <span class="text-danger">*</span></label>
                                     <select data-placeholder="Select Year" required id="year" name="year" class="form-control select">
                                         @foreach($years as $yr)
                                             <option {{ ($selected && $year == $yr->year) ? 'selected' : '' }} value="{{ $yr->year }}">{{ $yr->year }}</option>
@@ -42,15 +42,15 @@
 @if($selected)
     <div class="card">
         <div class="card-header header-elements-inline">
-            <h6 class="card-title">Manage Payments for {{ $year }} Session</h6>
+            <h6 class="card-title">Manage Pembayaran untuk tahun {{ $year }} </h6>
             {!! Qs::getPanelOptions() !!}
         </div>
 
         <div class="card-body">
             <ul class="nav nav-tabs nav-tabs-highlight">
-                <li class="nav-item"><a href="#all-payments" class="nav-link active" data-toggle="tab">All Classes</a></li>
+                <li class="nav-item"><a href="#all-payments" class="nav-link active" data-toggle="tab">Semua Kelas</a></li>
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Class Payments</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pembayaran Kelas</a>
                     <div class="dropdown-menu dropdown-menu-right">
                         @foreach($my_classes as $mc)
                             <a href="#pc-{{ $mc->id }}" class="dropdown-item" data-toggle="tab">{{ $mc->name }}</a>
@@ -64,12 +64,12 @@
                         <table class="table datatable-button-html5-columns">
                             <thead>
                             <tr>
-                                <th>#</th>
-                                <th>Title</th>
-                                <th>Amount</th>
-                                <th>Ref_No</th>
-                                <th>Class</th>
-                                <th>Method</th>
+                                <th>No</th>
+                                <th>Judul</th>
+                                <th>Jumlah</th>
+                                <th>No Ref</th>
+                                <th>Kelas</th>
+                                <th>Metode</th>
                                 <th>Info</th>
                                 <th>Action</th>
                             </tr>
