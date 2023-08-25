@@ -18,7 +18,11 @@
 
                         <div class="col-md-3">
                             <div class="form-group">
+<<<<<<< HEAD
                                 <label for="my_class_id" class="col-form-label font-weight-bold">Kelas:</label>
+=======
+                                <label for="my_class_id" class="col-form-label font-weight-bold">Kelas :</label>
+>>>>>>> 9ec2c5e97f64c29bba120664804f74eed33545cf
                                 <select required onchange="getClassSubjects(this.value)" id="my_class_id" name="my_class_id" class="form-control select">
                                     <option value="">Select Class</option>
                                     @foreach($my_classes as $c)
@@ -30,7 +34,11 @@
 
                         <div class="col-md-3">
                             <div class="form-group">
+<<<<<<< HEAD
                                 <label for="section_id" class="col-form-label font-weight-bold">Tingkat Kelas:</label>
+=======
+                                <label for="section_id" class="col-form-label font-weight-bold">Tingkat Kelas :</label>
+>>>>>>> 9ec2c5e97f64c29bba120664804f74eed33545cf
                                 <select required id="section_id" name="section_id" data-placeholder="Select Class First" class="form-control select">
                                    @if($selected)
                                         @foreach($sections->where('my_class_id', $my_class_id) as $s)

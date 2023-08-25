@@ -18,7 +18,11 @@
 
                                     <div class="col-md-6">
                                         <div class="form-group">
+<<<<<<< HEAD
                                             <label for="my_class_id" class="col-form-label font-weight-bold">Kelas:</label>
+=======
+                                            <label for="my_class_id" class="col-form-label font-weight-bold">Kelas :</label>
+>>>>>>> 9ec2c5e97f64c29bba120664804f74eed33545cf
                                             <select required onchange="getClassSections(this.value)" id="my_class_id" name="my_class_id" class="form-control select">
                                                 <option value="">Pilih Kelas</option>
                                                 @foreach($my_classes as $c)
@@ -30,8 +34,13 @@
 
                                     <div class="col-md-6">
                                         <div class="form-group">
+<<<<<<< HEAD
                                             <label for="section_id" class="col-form-label font-weight-bold">Tingkat Kelas:</label>
                                             <select required id="section_id" name="section_id" data-placeholder="Pilih Kelas terlebih dahulu" class="form-control select">
+=======
+                                            <label for="section_id" class="col-form-label font-weight-bold">Tingkat Kelas :</label>
+                                            <select required id="section_id" name="section_id" data-placeholder="Select Class First" class="form-control select">
+>>>>>>> 9ec2c5e97f64c29bba120664804f74eed33545cf
                                         @if($selected)
                                             @foreach($sections as $s)
                                                     <option {{ ($section_id == $s->id ? 'selected' : '') }} value="{{ $s->id }}">{{ $s->name }}</option>

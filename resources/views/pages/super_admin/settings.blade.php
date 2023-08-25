@@ -22,7 +22,7 @@
                         <div class="form-group row">
                             <label for="current_session" class="col-lg-3 col-form-label font-weight-semibold">Current Session <span class="text-danger">*</span></label>
                             <div class="col-lg-9">
-                                <select data-placeholder="Choose..." required name="current_session" id="current_session" class="select-search form-control">
+                                <select data-placeholder="Pilih ....." required name="current_session" id="current_session" class="select-search form-control">
                                     <option value=""></option>
                                     @for($y=date('Y', strtotime('- 3 years')); $y<=date('Y', strtotime('+ 1 years')); $y++)
                                         <option {{ ($s['current_session'] == (($y-=1).'-'.($y+=1))) ? 'selected' : '' }}>{{ ($y-=1).'-'.($y+=1) }}</option>
