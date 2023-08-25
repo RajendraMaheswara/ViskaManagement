@@ -1,18 +1,18 @@
 @extends('layouts.master')
-@section('page_title', 'Manage Dorms')
+@section('page_title', 'Manage Ruangan')
 @section('content')
 
     <div class="card">
         <div class="card-header header-elements-inline">
-            <h6 class="card-title">Manage Dorms</h6>
+            <h6 class="card-title">Manage Ruangan</h6>
             {!! Qs::getPanelOptions() !!}
         </div>
 
         <div class="card-body">
             <ul class="nav nav-tabs nav-tabs-highlight">
-                <li class="nav-item"><a href="#all-dorms" class="nav-link active" data-toggle="tab">Manage Dorms</a></li>
-                <li class="nav-item"><a href="#new-dorm" class="nav-link" data-toggle="tab"><i class="icon-plus2"></i> Create
-                        New Dorm</a></li>
+                <li class="nav-item"><a href="#all-dorms" class="nav-link active" data-toggle="tab">Manage Ruangan</a></li>
+                <li class="nav-item"><a href="#new-dorm" class="nav-link" data-toggle="tab"><i class="icon-plus2"></i> Tambah Ruangan
+                        </a></li>
             </ul>
 
             <div class="tab-content">
@@ -20,9 +20,9 @@
                     <table class="table datatable-button-html5-columns">
                         <thead>
                             <tr>
-                                <th>S/N</th>
-                                <th>Name</th>
-                                <th>Description</th>
+                                <th>No</th>
+                                <th>Nama</th>
+                                <th>Deskripsi</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -72,7 +72,7 @@
                             <form class="ajax-store" method="post" action="{{ route('dorms.store') }}">
                                 @csrf
                                 <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label font-weight-semibold">Name <span
+                                    <label class="col-lg-3 col-form-label font-weight-semibold">Nama <span
                                             class="text-danger">*</span></label>
                                     <div class="col-lg-9">
                                         <input name="name" value="{{ old('name') }}" required type="text"
@@ -81,7 +81,7 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label font-weight-semibold">Description</label>
+                                    <label class="col-lg-3 col-form-label font-weight-semibold">Deskripsi</label>
                                     <div class="col-lg-9">
                                         <input name="description" value="{{ old('description') }}" type="text"
                                             class="form-control" placeholder="Description of Dormitory">
